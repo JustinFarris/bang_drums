@@ -1,15 +1,32 @@
-const int LT1 = 5; //red
-const int LT2 = 6; //green
-const int LT3 = 7; //blue
-const int LT4 = 8; //white
-const int LT5R = 3; 
-const int LT5G = 2; 
-const int LT5B = 10; 
-const int TR1 = 21;
-const int TR2 = 20;
-const int TR3 = 19;
-const int TR4 = 18;
-const int TR5 = 9;
+// triggers need analog pins (8 per nano, A0-A7)
+const int TR1 = 23;
+const int TR2 = 24;
+const int TR3 = 25;
+const int TR4 = 26;
+const int TR5 = 27;
+const int TR6 = 28;
+const int TR7 = 19;
+const int TR8 = 22;
+
+// 6 digital single-color outputs (nano: pins 0-5)
+const int LT1 = 0; //red
+const int LT2 = 1; //green
+const int LT3 = 2; //blue
+const int LT4 = 3; //white
+const int LT5 = 4; //white
+const int LT6 = 5; //white
+
+// 2 digital dynamic-color outputs, 3 pins each (nano: pins 6-11)
+const int LT7R = 6; 
+const int LT7G = 7; 
+const int LT7B = 8; 
+const int LT8R = 9; 
+const int LT8G = 10; 
+const int LT8B = 11; 
+
+// fire outputs
+// do these need to be different from color outputs?
+// or just have the "receiver" unit read all possible color pins and fire on any of them?
 
 const int hit = 100;
 
