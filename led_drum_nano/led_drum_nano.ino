@@ -1,28 +1,37 @@
+// INPUTS
+
 // triggers need analog pins (8 per nano, A0-A7)
-const int TR1 = 23;
-const int TR2 = 24;
-const int TR3 = 25;
-const int TR4 = 26;
-const int TR5 = 27;
-const int TR6 = 28;
-const int TR7 = 19;
-const int TR8 = 22;
+const int TR1 = A0;
+const int TR2 = A1;
+const int TR3 = A2;
+const int TR4 = A3;
+const int TR5 = A4;
+const int TR6 = A5;
+const int TR7 = A6;
+const int TR8 = A7;
 
-// 6 digital single-color outputs (nano: pins 0-5)
-const int LT1 = 0; //red
-const int LT2 = 1; //green
-const int LT3 = 2; //blue
-const int LT4 = 3; //white
-const int LT5 = 4; //white
-const int LT6 = 5; //white
+// OUTPUTS
 
-// 2 digital dynamic-color outputs, 3 pins each (nano: pins 6-11)
-const int LT7R = 6; 
-const int LT7G = 7; 
-const int LT7B = 8; 
-const int LT8R = 9; 
-const int LT8G = 10; 
-const int LT8B = 11; 
+// one FET per output pin
+
+// 7 digital single-color outputs (nano: pins 2-7/8)
+const int LT1 = 2; //red
+const int LT2 = 3; //red
+const int LT3 = 4; //green
+const int LT4 = 5; //green
+const int LT5 = 6; //blue
+const int LT6 = 7; //blue
+const int LT7 = 8; //white
+// optional extra white instead of dynamics
+//const int LT8 = 8; //white
+
+// 1 or 2 digital dynamic-color outputs, 3 pins each (nano: pins 8/11-13)
+//const int LT7R = 8; 
+//const int LT7G = 9; 
+//const int LT7B = 10; 
+const int LT8R = 11; 
+const int LT8G = 12; 
+const int LT8B = 13; 
 
 // fire outputs
 // do these need to be different from color outputs?
@@ -36,9 +45,14 @@ void setup()
   pinMode(LT2, OUTPUT);
   pinMode(LT3, OUTPUT);
   pinMode(LT4, OUTPUT);
-  pinMode(LT5R, OUTPUT);
-  pinMode(LT5G, OUTPUT);
-  pinMode(LT5B, OUTPUT);
+  pinMode(LT5, OUTPUT);
+  pinMode(LT6, OUTPUT);
+  pinMode(LT7R, OUTPUT);
+  pinMode(LT7G, OUTPUT);
+  pinMode(LT7B, OUTPUT);
+  pinMode(LT8R, OUTPUT);
+  pinMode(LT8G, OUTPUT);
+  pinMode(LT8B, OUTPUT);
   Serial.begin(9600);       // use the serial port
 }
 
